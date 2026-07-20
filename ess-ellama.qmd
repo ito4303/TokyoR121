@@ -1,0 +1,58 @@
+---
+title: "ESSからEllamaでローカルLLMをつかう"
+author: "伊東宏樹"
+date: 2026-07-25
+lang: ja
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    code-copy: true
+embed-resources: true
+slide-number: true
+---
+
+## 自己紹介
+
+- 氏名: 伊東宏樹
+
+- 個人事業主（[伊東生態統計研究室](https://ito4303.sakura.ne.jp/)）
+
+  - データ解析、執筆・翻訳、研修講師などお引き受けいたします。
+
+- 1991〜2024年まで森林総合研究所勤務（森林生態学）
+
+- 出版物: 『[BUGSで学ぶ階層モデリング入門](https://www.kyoritsu-pub.co.jp/book/b10003729.html)』『[生態学のための階層モデリング](https://www.kyoritsu-pub.co.jp/book/b10003301.html)』（以上共訳）など
+
+## はじめに
+
+RStudioやPositronでPosit AIをつかうと便利だが
+
+- お金がかかる
+
+- 外に出せない内容は扱えない
+
+- ローカルLLM
+
+## Emacs
+
+
+
+## ESS
+
+Emacs Speaks Statics
+
+## Ellama
+
+Ollama
+
+## コードレビュー
+
+## コード補完
+
+
+## おわりに
+
+- 速くてメモリを大量につんだ計算機をつかうと
+
+- 制限があるなかでもそれなりに
+
