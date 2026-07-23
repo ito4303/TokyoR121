@@ -1,5 +1,6 @@
 ---
-title: "ESSからEllamaでローカルLLMをつかう"
+title: "ESSからEllamaで<br />ローカルLLMをつかう"
+subtitle: "Tokyo.R 121"
 author: "伊東宏樹"
 date: 2026-07-25
 lang: ja
@@ -17,42 +18,102 @@ slide-number: true
 
 - 個人事業主（[伊東生態統計研究室](https://ito4303.sakura.ne.jp/)）
 
-  - データ解析、執筆・翻訳、研修講師などお引き受けいたします。
-
-- 1991〜2024年まで森林総合研究所勤務（森林生態学）
-
 - 出版物: 『[BUGSで学ぶ階層モデリング入門](https://www.kyoritsu-pub.co.jp/book/b10003729.html)』『[生態学のための階層モデリング](https://www.kyoritsu-pub.co.jp/book/b10003301.html)』（以上共訳）など
+
+- [Kanazawa.R](https://kanazawar.connpass.com/)
+  - 年2回開催してます。次回は11月ごろ(?)
+
+
 
 ## はじめに
 
-RStudioやPositronでPosit AIをつかうと便利だが
+::: {.incremental}
+- RStudioやPositronでPosit AIをつかうと便利だが
+  - お金がかかる
+  - 外に出せない内容は扱えない
 
-- お金がかかる
+- そういうときは
+  - ローカルLLM
+:::
 
-- 外に出せない内容は扱えない
+## Ollama
 
-- ローカルLLM
+- <https://ollama.com/>
+
+- オープンソースのLLMをうごかせる
+
+- Rでは[ollamar](https://cran.r-project.org/package=ollamar)や[ellmer](https://cran.r-project.org/package=ellmer)パッケージで利用可能
 
 ## Emacs
 
+- 1970からあるテキストエディタ
 
+- GNU Emacsが有名
 
-## ESS
+## ESS (Emacs Speaks Statics)
 
-Emacs Speaks Statics
+- <https://ess.r-project.org/>
+
+- Emacsパッケージ
+
+  - Emacsで、Rなどの統計言語のスクリプトを編集・実行できる
 
 ## Ellama
 
-Ollama
+- <https://github.com/s-kostyaev/ellama>
 
-## コードレビュー
+- EmacsからOllamaをつかうEmacsパッケージ
+
+- 設定など
+
+  - [最強ローカルLLM実行環境としてのEmacs](https://blog.tomoya.dev/posts/emacs-on-local-llm/)
+  
+  - [EmacsでローカルLLMのEllamaを日本語で扱う設定](https://qiita.com/keita44_f4/items/2386e1623b3e3199efc0)
+
+
+## 実行例
+
+:::{style = "margin-top: 1em;"}
+### 実行環境
+
+- MacBook Air (M5) メモリ16GB
+
+- gemma4:e4b
+:::
+
 
 ## コード補完
 
+`M-x ellama-code-complete`
+
+![](figs/code-complete-code.png)
+
+---
+
+### 結果
+
+:::{style = "margin-top: -1em;"}
+![](figs/code-complete-results.png)
+:::
+
+## その他
+
+- コードレビュー
+
+  - `M-x ellama-code-review`
+
+- チャット
+
+  - `M-x ellama-chat`
+
+など
 
 ## おわりに
 
-- 速くてメモリを大量につんだ計算機をつかうと
+- Posit AIとはちがって、オブジェクトの中身までは見ない
 
-- 制限があるなかでもそれなりに
+- 制限があるなかでもそれなりにできた
+
+- メモリを大量につんだ計算機で、大きなモデルをつかえば、もっとよい結果が得られるかも
+
 

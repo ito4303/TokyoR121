@@ -51,5 +51,6 @@ rsconnect/
 # Other files
 \#*\#
 .\#*
+*_files/
 *.html
 
