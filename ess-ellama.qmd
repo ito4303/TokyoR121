@@ -96,6 +96,30 @@ slide-number: true
 ![](figs/code-complete-results.png)
 :::
 
+---
+
+### できたグラフ
+
+```{r}
+data(penguins)
+# 必要なライブラリのロード
+library(ggplot2)
+
+ggplot(penguins, aes(x = bill_len, y = body_mass)) +
+  geom_point() +
+  facet_wrap(~species) +
+  labs(
+    title = "種ごとの嘴の長さと体重の関係",
+    x = "嘴の長さ (bill_len)",
+    y = "体重 (body_mass)"
+  ) +
+  theme_minimal(base_family = "Noto Sans JP")
+```
+:::{style = "font-size: 67%;"}
+※ フォント指定は追加 `theme_minimal(base_family = "Noto Sans JP")`
+:::
+
+
 ## その他
 
 - コードレビュー
@@ -109,8 +133,6 @@ slide-number: true
 など
 
 ## おわりに
-
-- Posit AIとはちがって、オブジェクトの中身までは見ない
 
 - 制限があるなかでもそれなりにできた
 
